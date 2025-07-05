@@ -1,0 +1,347 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* General Section Headings */
+section h2 {
+    font-size: 2.5rem; /* Larger, more prominent headings */
+    margin-bottom: 20px;
+    color: #0056b3;
+    font-weight: 700;
+}
+
+/* Navbar Enhancements */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition for background if it changes */
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.8rem 1.2rem; /* More padding for easier clicking */
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 85vh; /* Make it take up most of the viewport height */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg') no-repeat center center/cover; /* Add a background image with overlay */
+    position: relative;
+    color: white; /* Ensure text is white over dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0; /* Add some padding for smaller screens */
+}
+
+.hero-section .container {
+    z-index: 1; /* Ensure content is above background overlay */
+}
+
+.hero-section .profile-img {
+    width: 180px; /* Larger profile image */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure it's perfectly round */
+    border: 6px solid #ffc107; /* Accent border */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.4); /* Glow effect */
+    animation: pulse 2s infinite ease-in-out; /* Subtle animation */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 3.5rem; /* Adjust based on display-4, make it bolder */
+}
+
+.hero-section p.lead {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Override Bootstrap button styles for hero */
+.hero-section .btn-outline-light {
+    border-color: white;
+    color: white;
+    font-weight: 600;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+.hero-section .btn-outline-light:hover {
+    background-color: white;
+    
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.hero-section .btn-outline-warning {
+    border-color: #ffc107;
+    color: #ffc107;
+    font-weight: 600;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+.hero-section .btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* General Section Styling */
+section {
+    padding-top: 80px !important; /* Ensure good spacing for all sections */
+    padding-bottom: 80px !important;
+}
+
+section:nth-of-type(even) {
+    background-color: #f8f9fa; /* Light background for alternating sections */
+}
+
+section:nth-of-type(odd) {
+    background-color: white; /* White background for alternating sections */
+}
+
+/* Card Styling (for Education, Activities, Achievements) */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Skills Badges */
+.skill-badge {
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #0056b3; /* Primary brand color */
+}
+
+.skill-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #003f88 !important; /* Darker blue on hover */
+}
+
+/* Projects Cards */
+.project-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    height: 200px; /* Consistent image height */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Download CV Button */
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003f88;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary {
+    color: #0056b3;
+    border-color: #0056b3;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* Contact Section */
+#contact p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+#contact a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+    display: inline-flex;
+    width: 50px; /* Larger icons */
+    height: 50px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Larger icon size */
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon:hover {
+    background-color: #ffc107;
+    color: #333333;
+    transform: translateY(-5px) scale(1.15); /* More pronounced hover effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    font-size: 0.9rem;
+    padding: 20px 15px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: white; /* Change color on hover for footer links */
+}
+
+/* Scroll-to-Top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 30px; /* Place at the bottom */
+    right: 30px; /* Place at the right */
+    z-index: 99; /* High z-index to be on top */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0056b3; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px 18px; /* Some padding */
+    border-radius: 50%; /* Rounded shape */
+    font-size: 1.3rem; /* Larger icon */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #003f88; /* Darker background on hover */
+    transform: translateY(-5px); /* Lift higher */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0 !important;
+    }
+    
+    #scrollTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
